@@ -26,6 +26,7 @@ class SearchTodo extends Component {
       headers: {
         "Content-Type": "application/json" 
       },
+      withCredentials: true,
       params: {
         taskname: this.state.content
       }
@@ -34,7 +35,7 @@ class SearchTodo extends Component {
         tmpdata: JSON.stringify(res.data),
       });
       // uncomment to see from the browser console log what is returned 
-      //console.log(this.state.tmpdata);
+      console.log(this.state.tmpdata);
     });
   };
   
